@@ -4,13 +4,13 @@ import SearchBtn from './SearchBtn'
 
 
 export function ShoppingCards({ filteredItems }) {
-  const { addFavorite, addToCart } = useFavorites();  // Accedemos al contexto para usar la función addFavorite
+  const { addFavorite, addToCart } = useFavorites();  
 
   function getRandomPrice() {
     return (Math.floor(Math.random() * 21) + 10).toFixed(2);
   }
 
-  // Mapeamos los productos y les añadimos el precio aleatorio
+
   const updatedItems = filteredItems.slice(0, 24).map((item) => ({
     ...item,
     randomPrice: getRandomPrice()
@@ -33,7 +33,7 @@ export function ShoppingCards({ filteredItems }) {
 
           <div className="flex items-center gap-2">
             <button
-              onClick={() => addToCart(item)} // Llamamos a addToCart cuando se haga click en el botón
+              onClick={() => addToCart(item)} 
               className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600"
             >
               Añadir al carrito
