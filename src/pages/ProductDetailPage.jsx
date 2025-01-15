@@ -5,10 +5,10 @@ import { useFavorites } from "../context/ContextCart";
 
 const ProductDetailPage = () => {
   const { id } = useParams();
-  const { addToCart, addFavorite, removeFavorite, favorites } = useFavorites(); // Usamos addToCart y addFavorite desde el contexto
+  const { addToCart, addFavorite, removeFavorite, favorites } = useFavorites(); 
   const [liked, setLiked] = useState(false);
 
-  // Simulación de datos; deberás reemplazar esto con una consulta o contexto global
+
   const product = JSON.parse(localStorage.getItem("selectedProduct"));
 
   if (!product) {
@@ -16,16 +16,16 @@ const ProductDetailPage = () => {
   }
 
   const handleAddToCart = () => {
-    addToCart(product); // Agregamos el producto al carrito
+    addToCart(product); 
   };
 
   const handleAddToFav = () => {
     if (liked) {
-      removeFavorite(product.idMeal); // Si ya está en favoritos, lo eliminamos
+      removeFavorite(product.idMeal);
     } else {
-      addFavorite(product); // Agregamos el producto a favoritos
+      addFavorite(product);
     }
-    setLiked(!liked); // Cambiamos el estado de "me gusta"
+    setLiked(!liked); 
   };
 
   return (
