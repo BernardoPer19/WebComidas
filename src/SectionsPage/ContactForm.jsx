@@ -21,7 +21,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario, como una API
+  
     console.log(formData);
   };
 
@@ -31,7 +31,7 @@ const ContactForm = () => {
         <h2 className="text-3xl font-semibold text-center text-green-500 mb-6">Formulario de Contacto</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Nombre */}
+        
           <div>
             <label htmlFor="nombre" className="block text-green-600 font-medium">Nombre</label>
             <input
@@ -45,7 +45,6 @@ const ContactForm = () => {
             />
           </div>
 
-          {/* Número */}
           <div>
             <label htmlFor="numero" className="block text-green-600 font-medium">Número</label>
             <input
@@ -59,7 +58,6 @@ const ContactForm = () => {
             />
           </div>
 
-          {/* Comida */}
           <div>
             <label htmlFor="comida" className="block text-green-600 font-medium">Comida</label>
             <input
@@ -73,7 +71,6 @@ const ContactForm = () => {
             />
           </div>
 
-          {/* Comida extra (opcional) */}
           <div>
             <label htmlFor="comida_extra" className="block text-green-600 font-medium">Comida Extra (Opcional)</label>
             <input
@@ -86,7 +83,7 @@ const ContactForm = () => {
             />
           </div>
 
-          {/* Dirección */}
+     
           <div className="col-span-2">
             <label htmlFor="direccion" className="block text-green-600 font-medium">Dirección</label>
             <textarea
@@ -100,7 +97,7 @@ const ContactForm = () => {
             />
           </div>
 
-          {/* Mensaje */}
+   
           <div className="col-span-2">
             <label htmlFor="mensaje" className="block text-green-600 font-medium">Mensaje</label>
             <textarea
@@ -115,7 +112,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-        {/* Botón de enviar */}
+       
         <div className="flex justify-center">
           <button type="submit" className="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">Enviar</button>
         </div>
