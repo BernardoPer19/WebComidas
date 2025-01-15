@@ -1,17 +1,17 @@
 // src/pages/MenuPage.jsx
 import React from 'react';
-import ContainerShop from '../cart/Components/ContainerShop';  // Contenedor de productos (ajustado a la carpeta 'cart')
-import { useFood } from '../cart/hooks/useFood';  // Hook para traer los datos (ajustado a la carpeta 'cart/hooks')
+import ContainerShop from '../cart/Components/ContainerShop';  
+import { useFood } from '../cart/hooks/useFood';  
 
 const MenuPage = () => {
-  const {  loading, error } = useFood();  // Usar el hook aquí
+  const {  loading, error } = useFood(); 
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
   return (
       <div className="menu-page">
-        <ContainerShop />  {/* Pasamos las comidas, bebidas y postres */}
+        <ContainerShop /> 
       </div>
   );
 };
